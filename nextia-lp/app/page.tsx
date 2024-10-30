@@ -356,11 +356,11 @@ const Home = () => {
         </div>
 
         <div className="flex mt-5 items-center justify-center text-center">
-          <h3 className=" text-black mt-4 text-wrap">Esse é o futuro e sua empresa precisa estar nele!</h3>
+          <h3 className="text-2xl text-black mt-4 text-wrap">Esse é o futuro e sua empresa precisa estar nele!</h3>
         </div>
 
         <div className="flex mt-5 items-center justify-center text-center">
-          <h3 className=" text-black mt-4 text-wrap">Descida onde sua empresa vai estar no futuro!</h3>
+          <h3 className="text-black mt-4 text-wrap">Descida onde sua empresa<br/> vai estar no futuro!</h3>
         </div>
 
         <div className="flex flex-col lg:flex-row mt-5 items-center justify-center text-center gap-6 w-full">
@@ -387,7 +387,7 @@ const Home = () => {
                   >
                     <path d="M18 6L6 18M6 6l12 12"></path>
                   </svg>
-                  <span className="text-white">Vai ver seus concorrentes crescendo enquanto você assiste sem reagir.</span>
+                  <span className="text-white">Vai ver seus concorrentes crescendo: Seus concorrentes podem tomar decisão antes que você, e vai ficar assistindo eles crescerem.</span>
                 </li>
                 <li className="flex items-start">
                   <svg
@@ -404,7 +404,7 @@ const Home = () => {
                   >
                     <path d="M18 6L6 18M6 6l12 12"></path>
                   </svg>
-                  <span className="text-white">Estagnação: Quem não cresce e se atualiza pode fechar as portas.</span>
+                  <span className="text-white">Estagnação: Quem não cresce e se atualiza acaba ficando estagnado, e estagnação é possibilidade clara de fechar as portas.</span>
                 </li>
                 <li className="flex items-start">
                   <svg
@@ -421,7 +421,7 @@ const Home = () => {
                   >
                     <path d="M18 6L6 18M6 6l12 12"></path>
                   </svg>
-                  <span className="text-white">Alto custo de operação: Crescimento significa aumento nos custos.</span>
+                  <span className="text-white">Alto custo de operação: Se para crescer voce precisa de pessoas, seus custos itão subir toda vez que quiser escalar, se não controlar sua operação não se paga.</span>
                 </li>
               </ul>
               <img
@@ -455,7 +455,7 @@ const Home = () => {
                   >
                     <path d="M20 6L9 17l-5-5"></path>
                   </svg>
-                  <span className="text-white">Líder de mercado: Atendendo 10x mais clientes com menos pessoas.</span>
+                  <span className="text-white">Líder de mercado: Atendendo 10x mais clientes com um número muito menor de pessoas</span>
                 </li>
                 <li className="flex items-start">
                   <svg
@@ -472,7 +472,7 @@ const Home = () => {
                   >
                     <path d="M20 6L9 17l-5-5"></path>
                   </svg>
-                  <span className="text-white">Crescimento exponencial: Empresas que atendem mais, crescem mais.</span>
+                  <span className="text-white">Crescimento exponencial: Empresa que atende mais, cresce mais.</span>
                 </li>
                 <li className="flex items-start">
                   <svg
@@ -489,7 +489,7 @@ const Home = () => {
                   >
                     <path d="M20 6L9 17l-5-5"></path>
                   </svg>
-                  <span className="text-white">Economia Financeira: Reduz investimento e poupa tempo.</span>
+                  <span className="text-white">Economia Financeira: Investimento muito menor em folha de pagamento, além óbvio de economia de tempo.</span>
                 </li>
               </ul>
               <img
@@ -511,7 +511,7 @@ const Home = () => {
               <h3 className="mx-auto mt-4 max-w-xs text-3xl font-semibold sm:max-w-none sm:text-4xl md:text-5xl">
                 Uma decisão <span style={{ color: 'blue' }}>AGORA</span> pode mudar seu negócio!
               </h3>
-              <h2 className="text-sm text-primary font-mono font-medium tracking-wider uppercase">ESCOLHA SEU PLANO</h2>
+              <h2 className="text-md text-black font-mono font-medium tracking-wider uppercase">ESCOLHA SEU PLANO</h2>
             </div>
             <div className="flex justify-center mb-10">
               <span className="mr-2 font-semibold">Mensal</span>
