@@ -57,7 +57,7 @@ import { useEffect, useState } from "react";
 
 
 const Home = () => {
-  const [isYearly, setIsYearly] = useState(false);
+  const [isYearly, setIsYearly] = useState(true);
 
   //const ialamp1 = <Image src={ialamp as unknown as string} alt="ialamp" height="30" className="mr-2"></Image>;// Logo opcional
 
@@ -66,19 +66,23 @@ const Home = () => {
   const items = [
     {
       label: 'Início',
-      icon: () => <FontAwesomeIcon icon={faHome} className="menu-icon" />, // Ícone com classe para espaçamento
+      icon: () => <FontAwesomeIcon icon={faHome} className="menu-icon" />,
+      command: () => window.location.href = '#inicio'
     },
     {
       label: 'Benefícios',
       icon: () => <FontAwesomeIcon icon={faGift} className="menu-icon" />,
+      command: () => window.location.href = '#beneficios'
     },
     {
       label: 'Planos',
       icon: () => <FontAwesomeIcon icon={faTags} className="menu-icon" />,
+      command: () => window.location.href = '#planos'
     },
     {
       label: 'Fale Conosco',
       icon: () => <FontAwesomeIcon icon={faPhone} className="menu-icon" />,
+      command: () => window.location.href = '#fale-conosco'
     }
   ];
 
@@ -151,21 +155,22 @@ const Home = () => {
       </div>
 
       <main className=" flex-col gap-8 row-start-2 items-center">
-        <div className="flex-col items-center justify-center h-screen text-center p-0">
-          {/*<p>CRM - Chatbot IA - Disparo de Mensagens</p>*/}
-          <h1 className='mt-5'>
-            Chatbot com <span style={{ color: '#00ED87' }}>Inteligência </span>
-            <span style={{ color: 'blue' }}>Artificial</span>:
-            <br />
-            Faça o trabalho de 10 pessoas usando
-            <br />
-            <span style={{ color: '#00ED87' }}>Inteligência </span>
-            <span style={{ color: 'blue' }}>Artificial</span> e
-            <br />
-            escale seu negócio 10x mais!
-          </h1>
+        <section id="inicio">
+          <div className="flex-col items-center justify-center h-screen text-center p-0">
+            {/*<p>CRM - Chatbot IA - Disparo de Mensagens</p>*/}
+            <h1 className='mt-5'>
+              Chatbot com <span style={{ color: '#00ED87' }}>Inteligência </span>
+              <span style={{ color: 'blue' }}>Artificial</span>:
+              <br />
+              Faça o trabalho de 10 pessoas usando
+              <br />
+              <span style={{ color: '#00ED87' }}>Inteligência </span>
+              <span style={{ color: 'blue' }}>Artificial</span> e
+              <br />
+              escale seu negócio 10x mais!
+            </h1>
 
-          {/* <a
+            {/* <a
             href="https://www.exemplo.com"
             target="_blank"
             rel="noopener noreferrer"
@@ -173,13 +178,14 @@ const Home = () => {
             <Button className="mt-4 z-10 p-button-sm p-button-text mr-2 rounded-lg border border-green-500 text-black px-3 py-2 custom-rounded">Teste grátis por 15 dias</Button>
           </a> */}
 
-          <div className="z-10 flex items-center justify-center mt-5 text-center">
-            <PulsatingButton className='z-10 text-black font-bold'>ACESSE AGORA</PulsatingButton>
-          </div>
+            <div className="z-10 flex items-center justify-center mt-5 text-center">
+              <PulsatingButton className='z-10 text-black font-bold'>ACESSE AGORA</PulsatingButton>
+            </div>
 
-          {!isMobile && <Globe className="top-28" />}
-          <div className="pointer-events-none absolute inset-0 h-full bg-[radial-gradient(circle_at_50%_200%,rgba(0,0,0,0.2),rgba(255,255,255,0))]" />
-        </div>
+            {!isMobile && <Globe className="top-28" />}
+            <div className="pointer-events-none absolute inset-0 h-full bg-[radial-gradient(circle_at_50%_200%,rgba(0,0,0,0.2),rgba(255,255,255,0))]" />
+          </div>
+        </section>
 
         <h3 className="flex mt-20 items-center justify-center text-center">Nosso CEO tem um recado para você!</h3>
 
@@ -209,16 +215,18 @@ const Home = () => {
           <TextReveal text="Nosso CEO tem um recado para você!" />
         </div> */}
 
-        <div className="flex pt-10 mb-3 items-center justify-center text-center">
-          <h3 className="text-black text-wrap">
-            <b>Realize todo seu atendimento no <br />Whatsapp e Instagram</b>
-            <br />
-            <b>com </b>
-            <span style={{ color: '#00ED87' }}><b>Inteligência </b></span>
-            <span style={{ color: 'blue' }}><b>Artificial</b></span>!
-            <br />
-          </h3>
-        </div>
+        <section id="beneficios">
+          <div className="flex pt-10 mb-3 items-center justify-center text-center">
+            <h3 className="text-black text-wrap">
+              <b>Realize todo seu atendimento no <br />Whatsapp e Instagram</b>
+              <br />
+              <b>com </b>
+              <span style={{ color: '#00ED87' }}><b>Inteligência </b></span>
+              <span style={{ color: 'blue' }}><b>Artificial</b></span>!
+              <br />
+            </h3>
+          </div>
+        </section>
 
 
         <div className="flex h-[500px] w-full flex-col gap-4 mt-10 lg:h-[250px] lg:flex-row">
@@ -360,13 +368,13 @@ const Home = () => {
         </div>
 
         <div className="flex mt-5 items-center justify-center text-center">
-          <h3 className="text-black mt-4 text-wrap">Descida onde sua empresa<br/> vai estar no futuro!</h3>
+          <h3 className="text-black mt-4 text-wrap">Descida onde sua empresa<br /> vai estar no futuro!</h3>
         </div>
 
-        <div className="flex flex-col lg:flex-row mt-5 items-center justify-center text-center gap-6 w-full">
-          <div className="flex h-full w-full max-w-sm">
+        <div className="flex flex-col lg:flex-row mt-5 items-center lg:items-stretch justify-center text-center gap-6 w-full">
+          <div className="flex h-full w-full max-w-md mt-5 mb-5 ">
             <div
-              className="relative rounded-2xl border border-gray-600 p-6 bg-gray-500 lg:bg-gray-600 text-left shadow-2xl w-full flex flex-col min-h-[400px] justify-between"
+              className="relative rounded-2xl border border-gray-600 p-6 bg-gray-500 lg:bg-gray-600 text-left shadow-2xl w-full flex flex-col min-h-[500px] justify-between"
             >
               <h2 className="text-3xl font-bold text-white mb-6">
                 <span className="text-red-600">SEM</span> A INTELIGÊNCIA ARTIFICIAL
@@ -387,7 +395,7 @@ const Home = () => {
                   >
                     <path d="M18 6L6 18M6 6l12 12"></path>
                   </svg>
-                  <span className="text-white">Vai ver seus concorrentes crescendo: Seus concorrentes podem tomar decisão antes que você, e vai ficar assistindo eles crescerem.</span>
+                  <span className="text-white">Veja seus concorrentes crescendo: Eles podem tomar decisões antes que você e você ficará assistindo ao crescimento deles.</span>
                 </li>
                 <li className="flex items-start">
                   <svg
@@ -404,7 +412,7 @@ const Home = () => {
                   >
                     <path d="M18 6L6 18M6 6l12 12"></path>
                   </svg>
-                  <span className="text-white">Estagnação: Quem não cresce e se atualiza acaba ficando estagnado, e estagnação é possibilidade clara de fechar as portas.</span>
+                  <span className="text-white">Estagnação: Quem não cresce e se atualiza fica estagnado, e isso pode levar ao fechamento das portas.</span>
                 </li>
                 <li className="flex items-start">
                   <svg
@@ -421,7 +429,7 @@ const Home = () => {
                   >
                     <path d="M18 6L6 18M6 6l12 12"></path>
                   </svg>
-                  <span className="text-white">Alto custo de operação: Se para crescer voce precisa de pessoas, seus custos itão subir toda vez que quiser escalar, se não controlar sua operação não se paga.</span>
+                  <span className="text-white">Alto custo de operação: Se crescer exige mais pessoas, seus custos aumentam sempre que escalar. Sem controle, a operação não se sustenta.</span>
                 </li>
               </ul>
               <img
@@ -432,9 +440,9 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="flex h-full w-full max-w-sm">
+          <div className="flex h-full w-full max-w-md mt-5 mb-5">
             <div
-              className="relative rounded-2xl border border-blue-500 p-6 bg-gradient-to-r from-green-500 to-blue-500 text-left shadow-2xl w-full flex flex-col min-h-[400px] justify-between"
+              className="relative rounded-2xl border border-blue-500 p-6 bg-gradient-to-r from-green-500 to-blue-500 text-left shadow-2xl w-full flex flex-col min-h-[500px] justify-between"
             >
               <h2 className="text-3xl font-bold text-white mb-6">
                 <span className="text-green-900">COM</span> A INTELIGÊNCIA ARTIFICIAL
@@ -455,7 +463,7 @@ const Home = () => {
                   >
                     <path d="M20 6L9 17l-5-5"></path>
                   </svg>
-                  <span className="text-white">Líder de mercado: Atendendo 10x mais clientes com um número muito menor de pessoas</span>
+                  <span className="text-white">Líder de mercado: Atenda 10x mais clientes com um número muito menor de pessoas.</span>
                 </li>
                 <li className="flex items-start">
                   <svg
@@ -472,7 +480,7 @@ const Home = () => {
                   >
                     <path d="M20 6L9 17l-5-5"></path>
                   </svg>
-                  <span className="text-white">Crescimento exponencial: Empresa que atende mais, cresce mais.</span>
+                  <span className="text-white">Crescimento exponencial: Empresas que atendem mais, crescem mais.</span>
                 </li>
                 <li className="flex items-start">
                   <svg
@@ -489,7 +497,7 @@ const Home = () => {
                   >
                     <path d="M20 6L9 17l-5-5"></path>
                   </svg>
-                  <span className="text-white">Economia Financeira: Investimento muito menor em folha de pagamento, além óbvio de economia de tempo.</span>
+                  <span className="text-white">Economia financeira: Investimento muito menor em folha de pagamento, além de economia de tempo.</span>
                 </li>
               </ul>
               <img
@@ -499,13 +507,15 @@ const Home = () => {
               />
             </div>
           </div>
-
         </div>
 
 
 
 
-        <section id="pricing">
+
+
+
+        <section id="planos">
           <div className="relative container mx-auto px-4 py-16 max-w-7xl">
             <div className="text-center space-y-4 pb-6">
               <h3 className="mx-auto mt-4 max-w-xs text-3xl font-semibold sm:max-w-none sm:text-4xl md:text-5xl">
@@ -514,7 +524,7 @@ const Home = () => {
               <h2 className="text-md text-black font-mono font-medium tracking-wider uppercase">ESCOLHA SEU PLANO</h2>
             </div>
             <div className="flex justify-center mb-10">
-              <span className="mr-2 font-semibold">Mensal</span>
+              <span className="mr-2 font-semibold">Desconto Anual</span>
               <label className="relative inline-flex items-center cursor-pointer">
                 <button
                   type="button"
@@ -528,17 +538,19 @@ const Home = () => {
                   ></span>
                 </button>
               </label>
-              <span className="ml-2 font-semibold">Anual</span>
+              <span className="ml-2 font-semibold"></span>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 justify-items-center p-4">
-              <div className="rounded-2xl border border-blue-500 p-6 bg-blue-500 text-center shadow-lg w-full max-w-xs">
+            <div className="rounded-2xl border border-blue-500 p-6 bg-blue-500 text-center shadow-lg w-full max-w-xs">
                 <div>
                   <p className="text-lg font-semibold text-white">Plano Básico</p>
-                  <p className="mt-6 flex items-center justify-center gap-x-2">
-                    <span className="text-4xl font-bold text-white">{isYearly ? 'R$1190,00' : 'R$119,90'}</span>
-                    <span className="text-sm font-semibold leading-6 text-white">/ {isYearly ? 'Anual' : 'Mensal'}</span>
+                  <p className="mt-6 flex items-center justify-center">
+                    <span className="text-4xl font-bold text-white">{isYearly ? 'R$99,17' : ''}</span>
+                    
+                    <span className="text-sm font-semibold leading-6 text-white">/ {isYearly ? 'Por Mês' : 'Mensal'}</span>
                   </p>
+                  <span className="text-1xl font-bold text-white">{isYearly ? 'R$1190,00' : 'R$119,90'}</span>
                   <p className="text-xs leading-5 text-white">{isYearly ? 'Cobrado anualmente' : 'Cobrado mensalmente'}</p>
                   <ul className="mt-5 space-y-2 text-left">
                     <li className="flex items-center">
@@ -586,10 +598,12 @@ const Home = () => {
               <div className="rounded-2xl border border-blue-500 p-6 bg-blue-500 text-center shadow-lg w-full max-w-xs">
                 <div>
                   <p className="text-lg font-semibold text-white">Plano Básico</p>
-                  <p className="mt-6 flex items-center justify-center gap-x-2">
-                    <span className="text-4xl font-bold text-white">{isYearly ? 'R$1190,00' : 'R$119,90'}</span>
-                    <span className="text-sm font-semibold leading-6 text-white">/ {isYearly ? 'Anual' : 'Mensal'}</span>
+                  <p className="mt-6 flex items-center justify-center">
+                    <span className="text-4xl font-bold text-white">{isYearly ? 'R$99,17' : ''}</span>
+                    
+                    <span className="text-sm font-semibold leading-6 text-white">/ {isYearly ? 'Por Mês' : 'Mensal'}</span>
                   </p>
+                  <span className="text-1xl font-bold text-white">{isYearly ? 'R$1190,00' : 'R$119,90'}</span>
                   <p className="text-xs leading-5 text-white">{isYearly ? 'Cobrado anualmente' : 'Cobrado mensalmente'}</p>
                   <ul className="mt-5 space-y-2 text-left">
                     <li className="flex items-center">
@@ -637,10 +651,12 @@ const Home = () => {
               <div className="rounded-2xl border border-blue-500 p-6 bg-blue-500 text-center shadow-lg w-full max-w-xs">
                 <div>
                   <p className="text-lg font-semibold text-white">Plano Básico</p>
-                  <p className="mt-6 flex items-center justify-center gap-x-2">
-                    <span className="text-4xl font-bold text-white">{isYearly ? 'R$1190,00' : 'R$119,90'}</span>
-                    <span className="text-sm font-semibold leading-6 text-white">/ {isYearly ? 'Anual' : 'Mensal'}</span>
+                  <p className="mt-6 flex items-center justify-center">
+                    <span className="text-4xl font-bold text-white">{isYearly ? 'R$99,17' : ''}</span>
+                    
+                    <span className="text-sm font-semibold leading-6 text-white">/ {isYearly ? 'Por Mês' : 'Mensal'}</span>
                   </p>
+                  <span className="text-1xl font-bold text-white">{isYearly ? 'R$1190,00' : 'R$119,90'}</span>
                   <p className="text-xs leading-5 text-white">{isYearly ? 'Cobrado anualmente' : 'Cobrado mensalmente'}</p>
                   <ul className="mt-5 space-y-2 text-left">
                     <li className="flex items-center">
@@ -731,44 +747,46 @@ const Home = () => {
 
 
 
-      <footer className="row-start-3 flex flex-col items-center gap-4">
-        <div className="flex gap-6 flex-wrap justify-center">
-          <a
-            className="flex items-center gap-2 text-current"
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FontAwesomeIcon icon={faPhone} />
-            (49) 98400-8398
-          </a>
+      <section id="fale-conosco">
+        <footer className="row-start-3 flex flex-col items-center gap-4">
+          <div className="flex gap-6 flex-wrap justify-center">
+            <a
+              className="flex items-center gap-2 text-current"
+              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon icon={faPhone} />
+              (49) 98400-8398
+            </a>
 
-          <a
-            className="flex items-center gap-2 text-current"
-            href="https://static.elfsight.com/platform/platform.js"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FontAwesomeIcon icon={faWhatsapp} />
-            (49) 9962-5742
-          </a>
+            <a
+              className="flex items-center gap-2 text-current"
+              href="https://static.elfsight.com/platform/platform.js"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon icon={faWhatsapp} />
+              (49) 9962-5742
+            </a>
 
-          <a
-            className="flex items-center gap-2 text-current"
-            href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FontAwesomeIcon icon={faEnvelope} />
-            contato@nextrack.com
-          </a>
-        </div>
+            <a
+              className="flex items-center gap-2 text-current"
+              href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon icon={faEnvelope} />
+              contato@nextrack.com
+            </a>
+          </div>
 
-        {/* Texto adicional abaixo dos links */}
-        <p className="text-center text-sm text-gray-500">
-          <span style={{ color: '#01EC89' }}>Next</span><span style={{ color: '#3B82F6' }}>rack</span> - Soluções em Rastreamento | Todos os direitos reservados.
-        </p>
-      </footer>
+          {/* Texto adicional abaixo dos links */}
+          <p className="text-center text-sm text-gray-500">
+            <span style={{ color: '#01EC89' }}>Next</span><span style={{ color: '#3B82F6' }}>rack</span> - Soluções em Rastreamento | Todos os direitos reservados.
+          </p>
+        </footer>
+      </section>
     </div >
   );
 }
