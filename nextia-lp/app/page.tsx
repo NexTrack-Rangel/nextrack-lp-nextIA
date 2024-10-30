@@ -168,7 +168,7 @@ const Home = () => {
           </a> */}
 
           <div className="z-10 flex items-center justify-center mt-5 text-center">
-            <PulsatingButton className='z-10'>Teste grátis por 15 dias</PulsatingButton>
+            <PulsatingButton className='z-10'>ACESSE AGORA</PulsatingButton>
           </div>
 
           {!isMobile && <Globe className="top-28" />}
