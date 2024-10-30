@@ -146,14 +146,17 @@ const Home = () => {
 
       <main className=" flex-col gap-8 row-start-2 items-center">
         <div className="flex-col items-center justify-center h-screen text-center p-0">
-          <p>CRM - Chatbot IA - Disparo de Mensagens</p>
-          <h1>
-            Com a <span style={{ color: '#00ED87' }}>Next</span>
-            <span style={{ color: 'blue' }}>rack</span>, organize
+          {/*<p>CRM - Chatbot IA - Disparo de Mensagens</p>*/}
+          <h1 className='mt-5'>
+            Chatbot com <span style={{ color: '#00ED87' }}>Inteligência </span>
+            <span style={{ color: 'blue' }}>Artificial</span>:
             <br />
-            seus clientes em um só lugar, gere
+            Faça o trabalho de 10 pessoas usando
             <br />
-            relacionamentos e venda mais!
+            <span style={{ color: '#00ED87' }}>Inteligência </span>
+            <span style={{ color: 'blue' }}>Artificial</span> e
+            <br />
+            escale seu negócio 10x mais!
           </h1>
 
           {/* <a
@@ -164,7 +167,7 @@ const Home = () => {
             <Button className="mt-4 z-10 p-button-sm p-button-text mr-2 rounded-lg border border-green-500 text-black px-3 py-2 custom-rounded">Teste grátis por 15 dias</Button>
           </a> */}
 
-          <div className='z-100 flex-row items-center mt-5 justify-between text-center'>
+          <div className="z-10 flex items-center justify-center mt-5 text-center">
             <PulsatingButton className='z-10'>Teste grátis por 15 dias</PulsatingButton>
           </div>
 
@@ -251,10 +254,11 @@ const Home = () => {
 
         <div className="flex mt-5 mb-3 items-center justify-center text-center">
           <h3 className=" text-black mt-4 text-wrap">
-            <b>O que o </b>
-            <span style={{ color: '#00ED87' }}><b>Next</b></span>
-            <span style={{ color: 'blue' }}><b>rack</b></span>
-            <b> Pode Fazer por Você?</b>
+            <b>O que a </b>
+            <span style={{ color: '#00ED87' }}><b>Inteligência </b></span>
+            <span style={{ color: 'blue' }}><b>Artificial</b></span>
+            <br />
+            <b>pode fazer por você?</b>
           </h3>
         </div>
 
@@ -265,69 +269,53 @@ const Home = () => {
           }
         >
           <MagicCard
-            className="flex-col items-center justify-center w-[60%] shadow-2xl whitespace-nowrap text-2xl"
+            className="flex-col items-center justify-center w-[60%] shadow-2xl text-xl"
             style={{
               background: `linear-gradient(to right, #015fff, #01ed88)`, // Gradiente de azul para verde
               borderRadius: '8px', // Borda arredondada
               padding: '20px' // Espaçamento opcional
             }}
           >
-            <div className="flex w-full">
-              <div className="mx-4 w-1/2 text-center">
+            <div className="flex w-full justify-center">
+              <div className="mx-4 text-center">
                 <ul className="mt-3 gap-2 flex flex-col">
                   <li className="flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check mr-2 flex-shrink-0 text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check mr-2 flex-shrink-0 text-white">
                       <path d="M20 6L9 17l-5-5"></path>
                     </svg>
-                    <span className="text-lg text-white font-bold">Disparos em Massa</span>
+                    <span className="text-base text-white font-bold whitespace-normal">
+                      Atendimento inicial e agendamentos (SDR): Configure nossa inteligência para realizar o primeiro atendimento ao seu lead e conduzi-lo até um agendamento presencial ou online.
+                    </span>
                   </li>
                   <li className="flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check mr-2 flex-shrink-0 text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check mr-2 flex-shrink-0 text-white">
                       <path d="M20 6L9 17l-5-5"></path>
                     </svg>
-                    <span className="text-lg text-white font-bold">Automação com Inteligência Artificial</span>
+                    <span className="text-base text-white font-bold whitespace-normal">
+                      Vendas: Imagine ela fazendo seu processo de vendas completo. Isso mesmo, nossas configurações permitem que ela inicie e finalize uma venda, de forma humanizada e automática.
+                    </span>
                   </li>
                   <li className="flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check mr-2 flex-shrink-0 text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check mr-2 flex-shrink-0 text-white">
                       <path d="M20 6L9 17l-5-5"></path>
                     </svg>
-                    <span className="text-lg text-white font-bold">Integração com WhatsApp e Instagram</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="mx-4 w-1/2 text-center">
-                <ul className="mt-3 gap-2 flex flex-col">
-                  <li className="flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check mr-2 flex-shrink-0 text-white">
-                      <path d="M20 6L9 17l-5-5"></path>
-                    </svg>
-                    <span className="text-lg text-white font-bold">Rastreamento de Lead</span>
-                  </li>
-                  <li className="flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check mr-2 flex-shrink-0 text-white">
-                      <path d="M20 6L9 17l-5-5"></path>
-                    </svg>
-                    <span className="text-lg text-white font-bold">Histórico de Conversas</span>
-                  </li>
-                  <li className="flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check mr-2 flex-shrink-0 text-white">
-                      <path d="M20 6L9 17l-5-5"></path>
-                    </svg>
-                    <span className="text-lg text-white font-bold">Funil de vendas</span>
+                    <span className="text-base text-white font-bold whitespace-normal">
+                      Suporte ao Cliente: A IA responde dúvidas e presta suporte de forma ágil, aumentando o sucesso do seu cliente.
+                    </span>
                   </li>
                 </ul>
               </div>
             </div>
           </MagicCard>
-        </div>
 
-        <div className="z-10 flex items-center justify-center mt-5 text-center">
-          <PulsatingButton>Agende uma demonstração!</PulsatingButton>
         </div>
 
         <div className="flex mt-5 items-center justify-center text-center">
           <h3 className=" text-black mt-4 text-wrap">Tome a decisão de qual empreendedor você quer ser!</h3>
+        </div>
+
+        <div className="flex mt-5 items-center justify-center text-center">
+          <h3 className=" text-black mt-4 text-wrap">Descida onde sua empresa vai estar no futuro!</h3>
         </div>
 
         <div className="flex mt-5 items-center justify-center text-center">
@@ -345,61 +333,48 @@ const Home = () => {
 
         */}
 
-          <div className="col-span-1 flex">
+          <div className="col-span-1 flex h-full">
             <div
-              className="rounded-2xl border-[1px] border-black-600 p-6 bg-gray-500 text-center lg:flex lg:flex-col lg:justify-center relative border-border z-0 transform translate-x-0 translate-y-0 -translate-z-[50px] rotate-y-[10deg] origin-right"
+              className="rounded-2xl border-[1px] border-black-600 p-6 bg-gray-500 text-center lg:flex lg:flex-col lg:justify-center relative border-border z-0 transform translate-x-0 translate-y-0 -translate-z-[50px] rotate-y-[10deg] origin-right h-full"
               style={{ opacity: 1, transform: 'translateX(30px) scale(0.94)' }}
             >
               <div>
                 <h2 className="text-base font-semibold" style={{ fontSize: '36px', fontWeight: 'bold' }}>
-                  <span className="text-red-600">SEM</span> <span className="text-white">A NEXTRACK</span>
+                  <span className="text-red-600">SEM</span> <span className="text-white">A INTELIGÊNCIA ARTIFICIAL</span>
                 </h2>
 
                 <ul className="mt-5 gap-2 flex flex-col">
-                  <li className="flex items-center">
+                  <li className="flex items-start">
                     <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="red" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-x mr-2">
                       <path d="M18 6L6 18M6 6l12 12"></path>
                     </svg>
-                    <span className="text-white">Muito tempo preenchendo planilhas</span>
+                    <span className="text-white self-start flex-1">Vai ver seus concorrentes<br /> crescendo: Seus concorrentes podem tomar decisão antes que você, e você vai ficar assistindo eles crescerem.</span>
                   </li>
-                  <li className="flex items-center">
+                  <li className="flex items-start">
                     <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="red" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-x mr-2">
                       <path d="M18 6L6 18M6 6l12 12"></path>
                     </svg>
-                    <span className="text-white">Bagunça e desorganização</span>
+                    <span className="text-white self-start flex-1">Estagnação: Quem não cresce<br /> e se atualiza acaba ficando<br /> estagnado, e estagnação é possibilidade clara de fechar as<br /> portas.</span>
                   </li>
-                  <li className="flex items-center">
+                  <li className="flex items-start">
                     <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="red" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-x mr-2">
                       <path d="M18 6L6 18M6 6l12 12"></path>
                     </svg>
-                    <span className="text-white">Funil Personalizado</span>
-                  </li>
-                  <li className="flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="red" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-x mr-2">
-                      <path d="M18 6L6 18M6 6l12 12"></path>
-                    </svg>
-                    <span className="text-white">Gestão de Tarefas</span>
-                  </li>
-                  <li className="flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="red" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-x mr-2">
-                      <path d="M18 6L6 18M6 6l12 12"></path>
-                    </svg>
-                    <span className="text-white">Mais tempo para ser estratégico</span>
+                    <span className="text-white self-start flex-1">Alto custo de operação: Se para<br /> crescer você precisa de pessoas,<br /> seus custos irão subir toda<br /> vez que quiser escalar, se não<br /> quiser controlar sua operação, não se<br /> paga.</span>
                   </li>
                 </ul>
               </div>
             </div>
           </div>
 
-
-          <div className="col-span-1 ">
+          <div className="col-span-1 flex h-full">
             <div
-              className="rounded-2xl border-[1px] border-blue-500 p-6 bg-gradient-to-r from-green-500 to-blue-500 text-center lg:flex lg:flex-col lg:justify-center relative border-border z-0 transform translate-x-0 translate-y-0 -translate-z-[50px] rotate-y-[10deg] origin-right"
+              className="rounded-2xl border-[1px] border-blue-500 p-6 bg-gradient-to-r from-green-500 to-blue-500 text-center lg:flex lg:flex-col lg:justify-center relative border-border z-0 transform translate-x-0 translate-y-0 -translate-z-[50px] rotate-y-[10deg] origin-right h-full"
               style={{ opacity: 1, transform: 'translateX(30px) scale(0.94)' }}
             >
               <div>
                 <h2 className="text-base font-semibold" style={{ fontSize: '36px', fontWeight: 'bold' }}>
-                  <span className="text-green-900">COM</span> <span className="text-white">A NEXTRACK</span>
+                  <span className="text-green-900">COM</span> <span className="text-white">A INTELIGÊNCIA ARTIFICIAL</span>
                 </h2>
 
                 <ul className="mt-5 gap-2 flex flex-col">
@@ -407,31 +382,19 @@ const Home = () => {
                     <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="green" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check mr-2">
                       <path d="M20 6L9 17l-5-5"></path>
                     </svg>
-                    <span className="text-white">Organização Automática</span>
+                    <span className="text-white">Líder de mercado: Atendendo 10x mais clientes com um número muito menor de pessoas.</span>
                   </li>
                   <li className="flex items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="green" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check mr-2">
                       <path d="M20 6L9 17l-5-5"></path>
                     </svg>
-                    <span className="text-white">Indicadores na palma da mão</span>
+                    <span className="text-white">Crescimento exponencial: Empresa que atende mais, cresce mais.</span>
                   </li>
                   <li className="flex items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="green" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check mr-2">
                       <path d="M20 6L9 17l-5-5"></path>
                     </svg>
-                    <span className="text-white">Funil Personalizado</span>
-                  </li>
-                  <li className="flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="green" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check mr-2">
-                      <path d="M20 6L9 17l-5-5"></path>
-                    </svg>
-                    <span className="text-white">Gestão de Tarefas</span>
-                  </li>
-                  <li className="flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="green" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check mr-2">
-                      <path d="M20 6L9 17l-5-5"></path>
-                    </svg>
-                    <span className="text-white">Mais tempo para ser estratégico</span>
+                    <span className="text-white">Economia Financeira:<br /> Investimento muito menor em<br /> folha de pagamento, além óbvio<br /> de economia de tempo.</span>
                   </li>
                 </ul>
               </div>
