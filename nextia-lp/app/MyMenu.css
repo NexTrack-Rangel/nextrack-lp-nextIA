@@ -1,0 +1,64 @@
+.sticky-menu {
+    position: -webkit-sticky;
+    /* Para navegadores com suporte Webkit */
+    position: sticky;
+    top: 0;
+    /* Fixa no topo quando a rolagem atinge o menu */
+    z-index: 1000;
+    /* Certifique-se de que o menu fique na frente de outros elementos */
+    border-radius: 15px;
+    /* Arredondar as bordas */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    /* Adicionar uma leve sombra */
+    background-color: white;
+    /* Cor de fundo do menu */
+    padding: 0.5rem;
+    /* Espaçamento interno */
+    margin-bottom: 10px;
+    /* Espaçamento inferior para dar um espaço do conteúdo */
+    text-decoration: none;
+}
+
+.text-button {
+    text-decoration: none;
+}
+
+.custom-rounded {
+    border-radius: 12px;
+    /* Ajuste o valor conforme necessário */
+    border: 5px solid #01ed88;
+}
+
+.custom-rounded-regist {
+    border-radius: 12px;
+    /* Ajuste o valor conforme necessário */
+    background-color: #01ed88;
+}
+
+
+/* Espaçamento entre ícone e texto */
+.menu-icon {
+    margin-right: 8px;
+    /* Ajuste o valor para mais ou menos espaço */
+}
+
+/* Remover o sublinhado dos itens do Menubar */
+.sticky-menu .p-menubar .p-menuitem-link {
+    text-decoration: none;
+    /* Remove o sublinhado */
+    padding-top: 8px;
+    /* Espaçamento extra para empurrar para baixo */
+    padding-bottom: 8px;
+    /* Adiciona consistência no espaçamento */
+    display: flex;
+    align-items: center;
+    /* Alinha ícone e texto na vertical */
+    color: inherit;
+    /* Garante que a cor do link seja aplicada */
+    margin-top: 20px;
+}
+
+.sticky-menu .p-menubar .p-menuitem-link:hover {
+    text-decoration: none;
+    /* Remove o sublinhado no hover */
+}
